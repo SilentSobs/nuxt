@@ -5,8 +5,8 @@ import { useNuxtApp } from '../nuxt'
 import { toArray } from '../utils'
 
 /** @since 3.0.0 */
-export function useRequestEvent (nuxtApp: NuxtApp = useNuxtApp()): H3Event {
-  return nuxtApp.ssrContext?.event as H3Event
+export function useRequestEvent(nuxtApp: NuxtApp = useNuxtApp()): H3Event | undefined {
+  return nuxtApp.ssrContext?.event as H3Event | undefined;
 }
 
 /** @since 3.0.0 */
